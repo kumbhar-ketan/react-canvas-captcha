@@ -1,6 +1,6 @@
 {
   "name": "react-canvas-captcha",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Add captcha to your react projects",
   "main": "dist/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kumbhar-ketan/react-captcha.git"
+    "url": "git+https://github.com/kumbhar-ketan/react-canvas-captcha.git"
   },
   "keywords": [
     "react-captcha",
@@ -23,9 +23,9 @@
   "author": "Ketan Kumbhar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kumbhar-ketan/react-captcha/issues"
+    "url": "https://github.com/kumbhar-ketan/react-canvas-captcha/issues"
   },
-  "homepage": "https://github.com/kumbhar-ketan/react-captcha#readme",
+  "homepage": "https://github.com/kumbhar-ketan/react-canvas-captcha#readme",
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
