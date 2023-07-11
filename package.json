@@ -1,0 +1,39 @@
+{
+  "name": "react-canvas-captcha",
+  "version": "0.0.9",
+  "description": "Add captcha to your react projects",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/babel src --out-dir dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kumbhar-ketan/react-captcha.git"
+  },
+  "keywords": [
+    "react-captcha",
+    "react",
+    "captcha",
+    "human",
+    "computer",
+    "bots",
+    "spam",
+    "bypass"
+  ],
+  "author": "Ketan Kumbhar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kumbhar-ketan/react-captcha/issues"
+  },
+  "homepage": "https://github.com/kumbhar-ketan/react-captcha#readme",
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.6",
+    "@babel/core": "^7.22.8",
+    "@babel/preset-env": "^7.22.7",
+    "@babel/preset-react": "^7.22.5"
+  }
+}
