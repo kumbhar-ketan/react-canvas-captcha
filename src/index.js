@@ -119,4 +119,4 @@ Captcha.defaultProps = {
   setCode: () => {}
 };
 
-export default Captcha;
+export default memo(Captcha);
