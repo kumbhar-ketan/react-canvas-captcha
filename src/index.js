@@ -111,8 +111,6 @@ Captcha.defaultProps = {
   boxHeight: 50,
   boxWidth: 130,
   captchaConfig: {
-    boxHeight: 50,
-    boxWidth: 130,
     numberOfChars: 4,
     font: 'bold 23px Arial',
     textStartingX: 15,
