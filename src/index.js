@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 
 const randomColor = () => {
   let r = Math.floor(Math.random()*256);
