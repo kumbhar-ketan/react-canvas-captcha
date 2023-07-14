@@ -1,6 +1,6 @@
 {
   "name": "react-canvas-captcha",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Add captcha to your react projects",
   "main": "dist/index.js",
   "scripts": {
