@@ -20,6 +20,8 @@ OR
 import Captcha from "react-canvas-captcha";
 
 const App = () => {
+  const [generatedCaptcha, setGeneratedCaptcha] = useState('');
+
   return (
     <Captcha
       boxHeight={50}
@@ -30,6 +32,7 @@ const App = () => {
         textStartingX: 15,
         textStartingY: 5,
       }}
+      setCode={(captchaCode) => setGeneratedCaptcha(captchaCode)}
     />
   );
 };
