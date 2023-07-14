@@ -2,6 +2,8 @@
 
 Add captcha to your react projects
 
+![React Captcha Image](https://raw.githubusercontent.com/kumbhar-ketan/react-canvas-captcha/main/react-canvas-captcha.png)
+
 ## Installation
 
 ```bash
