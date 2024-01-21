@@ -49,10 +49,5 @@ Parameter Name | Default Value | Description
 boxHeight      | 50            | Height of the canvas box
 boxWidth       | 130           | Width of the canvas box
 refreshButton  | false         | Show or hide the refresh button. To show the refresh button make this "true"
-captchaConfig  | {
-    numberOfChars: 4,
-    font: 'bold 23px Arial',
-    textStartingX: 15,
-    textStartingY: 5
-  }                              | Config for the box. Set the number of characters usinng prop "numberOfChars". Use "font" to set the font styling. Use "textStartingX" to set the horizontal starting point for characters inside the box. Use "textStartingY" to set the vertical starting point for characters inside the box.
+captchaConfig  | { numberOfChars: 4, font: 'bold 23px Arial', textStartingX: 15, textStartingY: 5 } | Config for the box. Set the number of characters usinng prop "numberOfChars". Use "font" to set the font styling. Use "textStartingX" to set the horizontal starting point for characters inside the box. Use "textStartingY" to set the vertical starting point for characters inside the box.
 setCode        |               | Use this function to get the new captcha code
