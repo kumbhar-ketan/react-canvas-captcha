@@ -14,7 +14,14 @@ const createCaptcha = (canvas, config) => {
   let context = canvas.getContext('2d');
   canvas.width = canvasWidth;
   canvas.height = canvasHeight;
-  let sCode = 'A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,0,1,2,3,4,5,6,7,8,9';
+
+  let sCode = 'A,a,B,b,C,c,D,d,E,e,F,f,G,g,H,h,I,i,J,j,K,k,L,l,M,m,N,n,O,o,P,p,Q,q,R,r,S,s,T,t,U,u,V,v,W,w,X,x,Y,y,Z,z,0,1,2,3,4,5,6,7,8,9';
+  if (config?.caseType === 'uppercase') {
+    sCode = 'A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,0,1,2,3,4,5,6,7,8,9';
+  }
+  if (config?.caseType === 'lowercase') {
+    sCode = 'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9';
+  }
   let saCode = sCode.split(',');
   let saCodeLen = saCode.length;
   for (let i = 0; i < config?.numberOfChars; i++) {
@@ -59,12 +66,12 @@ const createCaptcha = (canvas, config) => {
   return showNum.join('');
 };
 
-const Captcha = ({ boxWidth, boxHeight, refreshButton, captchaConfig, setCode }) => {
+const Captcha = ({ boxWidth, boxHeight, refreshButton, captchaConfig, setCode, caseType }) => {
   const canvasRef = useRef();
   const [captchaCode, setCaptchaCode] = useState('');
 
   const onChangeCaptcha = () => {
-    const newCaptcha = createCaptcha(canvasRef.current, { boxHeight, boxWidth, ...captchaConfig});
+    const newCaptcha = createCaptcha(canvasRef.current, { boxHeight, boxWidth, caseType, ...captchaConfig});
     setCaptchaCode(newCaptcha);
   }
 
@@ -74,7 +81,7 @@ const Captcha = ({ boxWidth, boxHeight, refreshButton, captchaConfig, setCode })
   }, [captchaCode]);
 
   useEffect(() => {
-    const newCaptcha = createCaptcha(canvasRef.current, { boxHeight, boxWidth, ...captchaConfig});
+    const newCaptcha = createCaptcha(canvasRef.current, { boxHeight, boxWidth, caseType, ...captchaConfig});
     setCaptchaCode(newCaptcha);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -114,6 +121,7 @@ Captcha.defaultProps = {
   boxHeight: 50,
   boxWidth: 130,
   refreshButton: false,
+  caseType: 'mix',
   captchaConfig: {
     numberOfChars: 4,
     font: 'bold 23px Arial',
